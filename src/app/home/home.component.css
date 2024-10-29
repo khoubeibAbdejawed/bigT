@@ -2,6 +2,39 @@
     display: flex;
   
 }
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px); /* Départ en bas */
+    opacity: 0; /* Invisible au début */
+  }
+  100% {
+    transform: translateY(0); /* Arrive à sa position finale */
+    opacity: 1; /* Complètement visible */
+  }
+  
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100px); /* Départ en bas */
+    opacity: 0; /* Invisible au début */
+  }
+  100% {
+    transform: translateY(0); /* Arrive à sa position finale */
+    opacity: 1; /* Complètement visible */
+  }
+  
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(100px); /* Départ en bas */
+    opacity: 0; /* Invisible au début */
+  }
+  100% {
+    transform: translateY(0); /* Arrive à sa position finale */
+    opacity: 1; /* Complètement visible */
+  }
+  
+}
 .video-container {
     position: relative;
     width: 100%;
@@ -54,11 +87,13 @@
   }
   .par h3{
     margin-top: 120px;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
     text-align:center;
     background:linear-gradient(45deg,#fc00ff,#00dbde);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
+    animation: slideUp 2s ease-out forwards;
   }
   .par p {
     margin: 18px;
@@ -67,11 +102,13 @@
     text-align:center;
     padding-left: 190px;
     padding-right: 190px;
+    animation: slideUp 2.5s ease-out forwards;
   }
   .start {
     display: flex;
     gap: 50px;
     flex-wrap: wrap;
+    animation: slideUp 3s ease-out forwards;
   }
   .start button {
     display: flex;
@@ -95,22 +132,15 @@
     margin-right: 8px;
      /* Espace entre l'icône et le texte */
   }
-
-  .par2 h3{
-    margin-top: 18px;
-    font-size: 1.4rem;
-    text-align:left;
-    background:linear-gradient(45deg,#fc00ff,#00dbde);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-  }
   .content-box {
     border-radius: 10px;  /* Adjust the radius as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow */
     overflow: hidden;  /* Ensure content doesn't overflow the border-radius */
     padding: 20px;  /* Adjust padding to give some space inside the container */
     background-color: #fff;
-    width: 500px; /* Optional: set a background color */
+    width: 500px;
+    animation: slideLeft 6.5s ease-out forwards;
+    
   }
   .content-box p {
     font-size: 0.8rem;
@@ -118,9 +148,9 @@
     text-align:center;
   }
   .content-box h4{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align:center;
-    background:linear-gradient(45deg,#5234FF,#00dbde);
+    background:linear-gradient(45deg,black,#00dbde);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
   }
@@ -132,9 +162,10 @@
     background:url("/public/blur.jpg");
     background-size: cover;
     width: 500px;
+    animation: slideLeft 6.5s ease-out forwards;
   }
   .content-boxL h4{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align:center;
     background:linear-gradient(45deg,white,#00dbde);
     -webkit-background-clip: text;
@@ -150,3 +181,24 @@
     font-size: 100px;
     opacity: 1;
  }
+ 
+@keyframes marquee {
+  0% { transform: translateX(-100%); }
+  25%{transform: translateX(25%);}
+  50%{transform: translateX(50%);}
+  75%{transform: translateX(75%);}
+  100%{transform: translateX(100%);}
+}
+
+
+.clts{
+  background: linear-gradient(45deg,#5234FF,#D800FF); 
+  animation: slideUp 5s ease-out forwards;
+}
+.clts h3{
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align:center;
+  color: white;
+  
+}

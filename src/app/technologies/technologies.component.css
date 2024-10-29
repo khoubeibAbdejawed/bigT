@@ -1,0 +1,45 @@
+.techContainer{
+    border-top-right-radius:200px;
+    background-color:#FAFAFA;
+    color: #00dbde;
+    padding: 20px;
+    animation: slideLeft 5s ease-out forwards;
+}
+.techP {
+    display: flex;
+    flex-direction: column;
+    animation: slideLeft 5s ease-out forwards;
+   }
+   .techP h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align:start;
+    background:linear-gradient(45deg,#fc00ff,#00dbde);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
+  .techP p {
+    font-size: 1rem;
+    color:grey;
+    text-align:left;
+    animation: slideLeft 5s ease-out forwards;
+  }
+  .techI .t{
+    margin-right: 24px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 170px;
+  }
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(-100px); /* Départ en bas */
+      opacity: 0; /* Invisible au début */
+    }
+    100% {
+      transform: translateY(0); /* Arrive à sa position finale */
+      opacity: 1; /* Complètement visible */
+    }
+    
+  }

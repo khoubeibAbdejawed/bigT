@@ -8,32 +8,46 @@ header {
   position: fixed;
   z-index: 1000000000000;
     width: 100%;
-    height: 100px;
+    height: 60px;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:space-evenly;
     padding: 20px;
     margin: 0;
-    background: linear-gradient(45deg,#0F89FF,#5234FF,#D800FF); /* Gradient background */
+    background: linear-gradient(45deg,#5234FF,#D800FF); /* Gradient background */
   }
-  header img {
+  header .logoo{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: white;
+    border-bottom-right-radius: 40px;
+    border-color: #5234FF;
+    border-width: 2px;
+    border-style: solid;
+  }
+  header .logoo img {
     width: 100px;
     height: 100px;
   }
   header ul {
+    margin-right: 70px;
     list-style: none;
     display: flex;
-    gap: 90px; /* Spacing between links */
+    gap: 20px; /* Spacing between links */
   }
   
-  header ul li a {
-    text-decoration: none;
+  header ul li button{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
     color: white;
     font-size: 18px;
   }
   
-  header ul li a:hover {
-    text-decoration: underline;
+  header ul li button:hover {
+    background-color: #D800FF;
+    border-radius: 10px;
   }
   header .tun {
     display: flex;
